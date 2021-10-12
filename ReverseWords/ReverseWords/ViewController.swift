@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         textField.addTarget(self, action: #selector(reverseButtonPressed), for: .editingDidEnd)
        
     }

@@ -37,7 +37,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crA-Co-w8g">
                                 <rect key="frame" x="110" y="801" width="194" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
                                 <connections>
                                     <action selector="reverseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wld-iY-B3H"/>
                                 </connections>
