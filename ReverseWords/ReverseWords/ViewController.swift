@@ -11,32 +11,58 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var reversedStringLabel: UILabel!
+    @IBOutlet weak var reverseButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        textField.addTarget(self, action: #selector(reverseButtonPressed), for: .editingDidEnd)
-       
+        self.reversedStringLabel.isHidden = true
+        self.reverseButton.setTitle("Reverse", for: .normal)
+        reverseButton.alpha = 0.7
+        textField.addTarget(self, action: #selector(changeButtonColor), for: .allEvents)
     }
     
+    var counter : Int = 0
     
-    @IBAction func reverseButtonPressed(_ sender: Any) {
+    @IBAction func buttonClicked(_ sender: Any) {
         
-        reverse(textField.text!)
+        counter+=1
         
-    }
-    
-    func reverse (_ string:String) -> Void {
-        var temp = ""
-        for index in (0..<string.count).reversed(){
-            let character = string[String.Index(utf16Offset: index, in: string)]
-            temp += String(character)
+        switch counter % 3 {
+        case 1:
+            if  let someString = textField.text {
+                self.reversedStringLabel.text = reverseWords(input: someString)
+                self.reversedStringLabel.isHidden = false
+                self.reverseButton.setTitle("Clear", for: .normal)
+            }
+        case 2:
+            if  reversedStringLabel.isEnabled == true {
+                
+                self.textField.text = ""
+                self.reversedStringLabel.text = ""
+                self.reverseButton.setTitle("Reverse", for: .normal)
+            }
+        default:
+            if  let someString = textField.text {
+                self.reversedStringLabel.text = reverseWords(input: someString)
+                self.reversedStringLabel.isHidden = false
+                self.reverseButton.setTitle("Clear", for: .normal)
+            }
         }
-        reversedStringLabel.text = temp
+    }
+    
+    func reverseWords(input: String) -> String {
+        let parts = input.components(separatedBy: " ")
+        let reversed = parts.enumerated().map { $0 % 2 == 0 ? String($1.reversed()) : $1 }
+        return reversed.joined(separator: " ")
+    }
+    
+    @objc private func changeButtonColor() {
+        if textField.hasText{
+            reverseButton.alpha = 1
+        }else{
+            reverseButton.alpha = 0.7
+        }
     }
 }
-
-
-
-
