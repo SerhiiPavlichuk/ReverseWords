@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController!.navigationBar.barTintColor = .placeholderText
         setupUI()
         textField.addTarget(self, action: #selector(changeButtonColor), for: .allEvents)
         
@@ -30,6 +30,10 @@ class ViewController: UIViewController {
         self.title = Constants.UI.title
         reverseButton.layer.cornerRadius = 14
         self.dividerView.backgroundColor = .placeholderText
+        
+        //MARK - why color does didnt changed?
+//        self.navigationController?.navigationBar.tintColor = .placeholderText
+       
     }
     
     var counter : Int = 0
