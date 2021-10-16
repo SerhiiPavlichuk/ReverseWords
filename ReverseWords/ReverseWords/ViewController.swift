@@ -12,15 +12,24 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var reversedStringLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
+    @IBOutlet weak var dividerView: UIView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.reversedStringLabel.isHidden = true
-        self.reverseButton.setTitle("Reverse", for: .normal)
-        reverseButton.alpha = 0.7
+        setupUI()
         textField.addTarget(self, action: #selector(changeButtonColor), for: .allEvents)
+        
+    }
+    
+    func setupUI() {
+        self.reversedStringLabel.isHidden = true
+        self.reverseButton.setTitle(Constants.UI.buttonReverseName, for: .normal)
+        reverseButton.alpha = 0.7
+        self.title = Constants.UI.title
+        reverseButton.layer.cornerRadius = 14
+        self.dividerView.backgroundColor = .placeholderText
     }
     
     var counter : Int = 0
@@ -30,24 +39,32 @@ class ViewController: UIViewController {
         counter+=1
         
         switch counter % 3 {
+            
         case 1:
+            
             if  let someString = textField.text {
                 self.reversedStringLabel.text = reverseWords(input: someString)
                 self.reversedStringLabel.isHidden = false
-                self.reverseButton.setTitle("Clear", for: .normal)
+                self.reverseButton.setTitle(Constants.UI.buttonClearName, for: .normal)
             }
+            
         case 2:
+            
             if  reversedStringLabel.isEnabled == true {
                 
                 self.textField.text = ""
                 self.reversedStringLabel.text = ""
-                self.reverseButton.setTitle("Reverse", for: .normal)
+                self.reverseButton.setTitle(Constants.UI.buttonReverseName, for: .normal)
+                self.reverseButton.alpha = 0.7
+                self.dividerView.backgroundColor = .placeholderText
             }
+            
         default:
+            
             if  let someString = textField.text {
                 self.reversedStringLabel.text = reverseWords(input: someString)
                 self.reversedStringLabel.isHidden = false
-                self.reverseButton.setTitle("Clear", for: .normal)
+                self.reverseButton.setTitle(Constants.UI.buttonClearName, for: .normal)
             }
         }
     }
@@ -61,6 +78,7 @@ class ViewController: UIViewController {
     @objc private func changeButtonColor() {
         if textField.hasText{
             reverseButton.alpha = 1
+            dividerView.backgroundColor = .systemBlue
         }else{
             reverseButton.alpha = 0.7
         }
