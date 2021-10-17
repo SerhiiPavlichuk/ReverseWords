@@ -57,9 +57,8 @@ class ViewController: UIViewController {
             self.reversedStringLabel.isHidden = true
             
         }else{
-            
+            self.dividerView.backgroundColor = .systemBlue
             self.reverseButton.isEnabled = true
-            self.dividerView.tintColor = .systemBlue
             self.reverseButton.alpha = 1
             
         }
