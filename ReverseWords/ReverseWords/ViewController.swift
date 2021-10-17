@@ -14,53 +14,82 @@ class ViewController: UIViewController {
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var dividerView: UIView!
     
+    var counter : Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController!.navigationBar.barTintColor = .placeholderText
+        
+        
         setupUI()
-        textField.addTarget(self, action: #selector(changeButtonColor), for: .allEvents)
+        textField.addTarget(self, action: #selector(buttonState), for: .allEvents)
         
     }
     
+    //MARK: - Methods
+    
     func setupUI() {
+        
+        if textField.text == "" {
+            self.reverseButton.isEnabled = false
+            self.reverseButton.setTitleColor(.white, for: .disabled)
+            self.reverseButton.backgroundColor = .systemBlue
+            self.reverseButton.alpha = 0.6
+        }
+        
         self.reversedStringLabel.isHidden = true
         self.reverseButton.setTitle(Constants.UI.buttonReverseName, for: .normal)
-        reverseButton.alpha = 0.7
         self.title = Constants.UI.title
-        reverseButton.layer.cornerRadius = 14
+        self.reverseButton.layer.cornerRadius = 14
         self.dividerView.backgroundColor = .placeholderText
         
         //MARK - why color does didnt changed?
-//        self.navigationController?.navigationBar.tintColor = .placeholderText
-       
+        //        self.navigationController?.navigationBar.tintColor = .placeholderText
+        
     }
     
-    var counter : Int = 0
+    @objc func buttonState() {
+        
+        if textField.text == "" {
+            self.reverseButton.isEnabled = false
+            self.reverseButton.setTitleColor(.white, for: .disabled)
+            self.reverseButton.alpha = 0.6
+            self.dividerView.tintColor = .placeholderText
+            self.reversedStringLabel.isHidden = true
+            
+        }else{
+            
+            self.reverseButton.isEnabled = true
+            self.dividerView.tintColor = .systemBlue
+            self.reverseButton.alpha = 1
+            
+        }
+    }
     
-    @IBAction func buttonClicked(_ sender: Any) {
+    func reverseWords(input: String) -> String {
+        let parts = input.components(separatedBy: " ")
+        let reversed = parts.map { String($0.reversed()) }
+        return reversed.joined(separator: " ")
+        
+    }
+    
+    //MARK: - Action
+    
+    @IBAction func buttonClicked(_ sender: UIButton) {
         
         counter+=1
         
-        switch counter % 3 {
+        switch counter % 2 {
             
         case 1:
             
-            if  let someString = textField.text {
-                self.reversedStringLabel.text = reverseWords(input: someString)
-                self.reversedStringLabel.isHidden = false
-                self.reverseButton.setTitle(Constants.UI.buttonClearName, for: .normal)
-            }
-            
-        case 2:
-            
-            if  reversedStringLabel.isEnabled == true {
+            if  reversedStringLabel.isHidden == false {
                 
                 self.textField.text = ""
                 self.reversedStringLabel.text = ""
                 self.reverseButton.setTitle(Constants.UI.buttonReverseName, for: .normal)
-                self.reverseButton.alpha = 0.7
+                self.reverseButton.isEnabled = false
                 self.dividerView.backgroundColor = .placeholderText
+                self.reverseButton.alpha = 0.6
             }
             
         default:
@@ -70,21 +99,6 @@ class ViewController: UIViewController {
                 self.reversedStringLabel.isHidden = false
                 self.reverseButton.setTitle(Constants.UI.buttonClearName, for: .normal)
             }
-        }
-    }
-    
-    func reverseWords(input: String) -> String {
-        let parts = input.components(separatedBy: " ")
-        let reversed = parts.enumerated().map { $0 % 2 == 0 ? String($1.reversed()) : $1 }
-        return reversed.joined(separator: " ")
-    }
-    
-    @objc private func changeButtonColor() {
-        if textField.hasText{
-            reverseButton.alpha = 1
-            dividerView.backgroundColor = .systemBlue
-        }else{
-            reverseButton.alpha = 0.7
         }
     }
 }
