@@ -49,7 +49,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled"/>
                                 <connections>
-                                    <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BjD-lY-EbA"/>
+                                    <action selector="reverseAndClearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lxT-fY-QXX"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a03-bJ-CPu">
@@ -93,9 +93,9 @@
                     <navigationItem key="navigationItem" id="gK4-NO-hkM"/>
                     <connections>
                         <outlet property="dividerView" destination="a03-bJ-CPu" id="P5p-eS-q9P"/>
-                        <outlet property="reverseButton" destination="crA-Co-w8g" id="kg3-PR-cKb"/>
+                        <outlet property="reverseAndClearButton" destination="crA-Co-w8g" id="2VZ-Rz-4m8"/>
                         <outlet property="reversedTextView" destination="SXA-QK-3df" id="USP-nX-HDx"/>
-                        <outlet property="textField" destination="Jab-4P-vZ1" id="Skj-AR-OhW"/>
+                        <outlet property="userInputTextField" destination="Jab-4P-vZ1" id="73I-6B-Gz7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
