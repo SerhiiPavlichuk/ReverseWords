@@ -13,7 +13,7 @@ struct Constants {
         static let title = "Reverse Words"
         static let buttonReverseName = "Reverse"
         static let buttonClearName = "Clear"
-    
+        static let font = "SF Pro Display"
     }
     
 }
