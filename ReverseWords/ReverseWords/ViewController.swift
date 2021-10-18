@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         self.reversedTextView.font = UIFont(name: Constants.UI.font, size: 22)
         self.reversedTextView.textColor = .systemBlue
         self.textField.font = UIFont(name: Constants.UI.font, size: 17)
-        
+        self.reversedTextView.isEditable = false
         
         //MARK - why color does didnt changed?
         //        self.navigationController?.navigationBar.tintColor = .placeholderText
