@@ -9,7 +9,7 @@ import UIKit
 
 class ReverseViewController: UIViewController {
     
-    // MARK: - Enum
+    // MARK: - Enums
     
     enum ScreenState {
         case blank
@@ -17,13 +17,16 @@ class ReverseViewController: UIViewController {
         case clear(reversedText: String)
     }
     
+    private enum Action {
+        case textChanged
+        case buttonPressed
+    }
+    
     // MARK: - Outlets
     
     @IBOutlet weak var userInputTextField: UITextField! {
         didSet {
-            userInputTextField.addTarget(self, action: #selector(buttonState), for: .editingChanged)
-            userInputTextField.addTarget(self, action: #selector(dividerState), for: .editingChanged)
-            userInputTextField.font = Constants.Font.userInputTextFieldFont
+            userInputTextField.addTarget(self, action: #selector(onTextFieldEdited), for: .editingChanged)
             userInputTextField.font = Constants.Font.userInputTextFieldFont
         }
     }
@@ -41,7 +44,6 @@ class ReverseViewController: UIViewController {
             reverseAndClearButton.setTitleColor(.white, for: .disabled)
             reverseAndClearButton.backgroundColor = .systemBlue
             reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
             reverseAndClearButton.layer.cornerRadius = CGFloat(Constants.UI.reverseAndClearButtonCornerRadius)
         }
     }
@@ -53,21 +55,21 @@ class ReverseViewController: UIViewController {
     
     // MARK: - Property
     
-    private var reverseMethod: ReverseMethod = ReverseMethod()
-    private var buttonPressCounter: Int = 1
+    private var reverseMethod = ReverseMethod()
     private var screenState: ScreenState = .blank {
         didSet {
             setupUI()
         }
     }
     
-    
     // MARK: - Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setupUI()
+        setupUI()
+        reverseAndClearButton.setTitleColor(.white, for: .disabled)
+        title = Constants.UI.title
     }
     
     // MARK: - Methods
@@ -76,79 +78,112 @@ class ReverseViewController: UIViewController {
         
         func setupBlankState() {
             
-            title = Constants.UI.title
             reverseAndClearButton.isEnabled = false
-            reverseAndClearButton.setTitleColor(.white, for: .disabled)
             reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
+            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
             reversedTextView.isHidden = true
+            reversedTextView.text?.removeAll()
             dividerView.backgroundColor = .placeholderText
+            userInputTextField.text?.removeAll()
         }
         
-        func setupReverseState() {
-    
+        func setupEnterTextState() {
+            
             reverseAndClearButton.isEnabled = true
             reverseAndClearButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
+            reversedTextView.isHidden = true
+            reversedTextView.text?.removeAll()
             dividerView.backgroundColor = .systemBlue
         }
         
         func setupClearState(withText: String) {
             
-            userInputTextField.text?.removeAll()
-            reversedTextView.text?.removeAll()
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
-            reverseAndClearButton.isEnabled = false
+            reverseAndClearButton.isEnabled = true
+            reverseAndClearButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonClearName, for: .normal)
+            reversedTextView.isHidden = false
+            reversedTextView.text = withText
             dividerView.backgroundColor = .placeholderText
-            reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
         }
         
         switch screenState {
         case .blank:
             setupBlankState()
         case .reverse:
-            setupReverseState()
+            setupEnterTextState()
         case .clear(let reversedText):
             setupClearState(withText: reversedText)
         }
     }
     
-    @objc private func buttonState() {
+    @objc private func onTextFieldEdited() {
         
-        if userInputTextField.text?.isEmpty ?? true {
-            screenState = .blank
-        } else {
-            screenState = .reverse
-        }
+        determineNextState(afterAction: .textChanged)
     }
     
-    @objc private func dividerState() {
+    private func determineNextState(afterAction action: Action) {
         
-        if userInputTextField.text?.isEmpty ?? true {
-            screenState = .blank
-        } else {
-            screenState = .reverse
+        var resultState: ScreenState?
+        
+        func determineNextStateAfterTextChanged() {
+            
+            switch screenState {
+            case .blank:
+                if userInputTextField.text?.isNotEmpty ?? false {
+                    resultState = .reverse
+                } else {
+                    resultState = nil
+                }
+            case .reverse:
+                if userInputTextField.text?.isEmpty ?? true {
+                    resultState = .blank
+                }
+            case .clear:
+                break
+            }
+        }
+        
+        func determineNextStateAfterButtonPressed() {
+            
+            switch screenState {
+            case .blank:
+                break
+            case .reverse:
+                if let value = userInputTextField.text,
+                   !value.isEmpty {
+                    let resultText = reverseMethod.reverseWords(input: value)
+                    resultState = .clear(reversedText: resultText)
+                } else {
+                    break
+                }
+            case .clear:
+                resultState = .blank
+            }
+        }
+        
+        switch action {
+        case .textChanged:
+            determineNextStateAfterTextChanged()
+        case .buttonPressed:
+            determineNextStateAfterButtonPressed()
+        }
+        
+        if let value = resultState {
+            screenState = value
         }
     }
     
     //MARK: - Action
     
-    @IBAction private func reverseAndClearButtonPressed(_ sender: UIButton) {
+    @IBAction func reverseAndClearButtonPressed(_ sender: UIButton) {
         
-        buttonPressCounter += 1
-        
-        if buttonPressCounter % 2 == 1 {
-            guard let someText = reversedTextView.text else { return }
-            screenState = .clear(reversedText: someText)
-//            userInputTextField.text?.removeAll()
-//            reversedTextView.text?.removeAll()
-//            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
-//            reverseAndClearButton.isEnabled = false
-//            dividerView.backgroundColor = .placeholderText
-//            reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
-        } else {
-            guard let someString = userInputTextField.text  else { return }
-            reversedTextView.text = reverseMethod.reverseWords(input: someString)
-            reversedTextView.isHidden = false
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonClearName, for: .normal)
-        }
+        determineNextState(afterAction: .buttonPressed)
     }
+}
+
+//MARK: - Extension
+
+extension String {
+    var isNotEmpty: Bool { return !isEmpty }
 }
