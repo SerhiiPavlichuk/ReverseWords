@@ -12,8 +12,8 @@ struct Constants {
     
     struct ButtonActions {
         
-        static let disabledButtonAlpha = CGFloat (0.6)
-        static let enabledButtonAlpha = CGFloat (1)
+        static let disabledButtonAlpha: CGFloat = 0.6
+        static let enabledButtonAlpha: CGFloat  =  1
         static let buttonReverseName = "Reverse"
         static let buttonClearName = "Clear"
     }
@@ -28,7 +28,7 @@ struct Constants {
     struct UI {
         
         static let title = "Reverse Words"
-        static let reverseAndClearButtonCornerRadius = CGFloat(14)
+        static let reverseAndClearButtonCornerRadius: CGFloat = 14
     }
     
     struct Symbols {
