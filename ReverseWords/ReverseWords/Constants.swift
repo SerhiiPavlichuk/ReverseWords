@@ -28,7 +28,7 @@ struct Constants {
     struct UI {
         
         static let title = "Reverse Words"
-        static let reverseAndClearButtonCornerRadius = 14
+        static let reverseAndClearButtonCornerRadius = CGFloat(14)
     }
     
     struct Symbols {

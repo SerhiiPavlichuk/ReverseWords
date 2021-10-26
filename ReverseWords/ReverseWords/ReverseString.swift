@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ReverseMethod {
+class ReverseString {
     
     func reverseWords(input: String) -> String {
         let parts = input.components(separatedBy: Constants.Symbols.separator)

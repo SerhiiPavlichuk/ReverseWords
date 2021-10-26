@@ -11,7 +11,7 @@ class ReverseViewController: UIViewController {
     
     // MARK: - Enums
     
-    enum ScreenState {
+    private enum ScreenState {
         case blank
         case reverse
         case clear(reversedText: String)
@@ -35,27 +35,20 @@ class ReverseViewController: UIViewController {
             reversedTextView.font = Constants.Font.reversedTextViewFont
             reversedTextView.textColor = .systemBlue
             reversedTextView.isEditable = false
-            reversedTextView.isHidden = true
         }
     }
-    @IBOutlet weak var reverseAndClearButton: UIButton! {
+    @IBOutlet weak var actionButton: UIButton! {
         didSet {
-            reverseAndClearButton.isEnabled = false
-            reverseAndClearButton.setTitleColor(.white, for: .disabled)
-            reverseAndClearButton.backgroundColor = .systemBlue
-            reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
-            reverseAndClearButton.layer.cornerRadius = CGFloat(Constants.UI.reverseAndClearButtonCornerRadius)
+            actionButton.setTitleColor(.white, for: .disabled)
+            actionButton.backgroundColor = .systemBlue
+            actionButton.layer.cornerRadius = Constants.UI.reverseAndClearButtonCornerRadius
         }
     }
-    @IBOutlet weak var dividerView: UIView! {
-        didSet {
-            dividerView.backgroundColor = .placeholderText
-        }
-    }
+    @IBOutlet weak var dividerView: UIView!
     
-    // MARK: - Property
+    // MARK: - Properties
     
-    private var reverseMethod = ReverseMethod()
+    private let reverseMethod = ReverseString()
     private var screenState: ScreenState = .blank {
         didSet {
             setupUI()
@@ -68,7 +61,6 @@ class ReverseViewController: UIViewController {
         super.viewDidLoad()
         
         setupUI()
-        reverseAndClearButton.setTitleColor(.white, for: .disabled)
         title = Constants.UI.title
     }
     
@@ -78,9 +70,9 @@ class ReverseViewController: UIViewController {
         
         func setupBlankState() {
             
-            reverseAndClearButton.isEnabled = false
-            reverseAndClearButton.alpha = Constants.ButtonActions.disabledButtonAlpha
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
+            actionButton.isEnabled = false
+            actionButton.alpha = Constants.ButtonActions.disabledButtonAlpha
+            actionButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
             reversedTextView.isHidden = true
             reversedTextView.text?.removeAll()
             dividerView.backgroundColor = .placeholderText
@@ -89,9 +81,9 @@ class ReverseViewController: UIViewController {
         
         func setupEnterTextState() {
             
-            reverseAndClearButton.isEnabled = true
-            reverseAndClearButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
+            actionButton.isEnabled = true
+            actionButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            actionButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
             reversedTextView.isHidden = true
             reversedTextView.text?.removeAll()
             dividerView.backgroundColor = .systemBlue
@@ -99,9 +91,9 @@ class ReverseViewController: UIViewController {
         
         func setupClearState(withText: String) {
             
-            reverseAndClearButton.isEnabled = true
-            reverseAndClearButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
-            reverseAndClearButton.setTitle(Constants.ButtonActions.buttonClearName, for: .normal)
+            actionButton.isEnabled = true
+            actionButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            actionButton.setTitle(Constants.ButtonActions.buttonClearName, for: .normal)
             reversedTextView.isHidden = false
             reversedTextView.text = withText
             dividerView.backgroundColor = .placeholderText
@@ -132,8 +124,6 @@ class ReverseViewController: UIViewController {
             case .blank:
                 if userInputTextField.text?.isNotEmpty ?? false {
                     resultState = .reverse
-                } else {
-                    resultState = nil
                 }
             case .reverse:
                 if userInputTextField.text?.isEmpty ?? true {
@@ -151,11 +141,9 @@ class ReverseViewController: UIViewController {
                 break
             case .reverse:
                 if let value = userInputTextField.text,
-                   !value.isEmpty {
+                   value.isNotEmpty {
                     let resultText = reverseMethod.reverseWords(input: value)
                     resultState = .clear(reversedText: resultText)
-                } else {
-                    break
                 }
             case .clear:
                 resultState = .blank
@@ -174,16 +162,10 @@ class ReverseViewController: UIViewController {
         }
     }
     
-    //MARK: - Action
+    // MARK: - Action
     
     @IBAction func reverseAndClearButtonPressed(_ sender: UIButton) {
         
         determineNextState(afterAction: .buttonPressed)
     }
-}
-
-//MARK: - Extension
-
-extension String {
-    var isNotEmpty: Bool { return !isEmpty }
 }
