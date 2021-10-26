@@ -12,8 +12,8 @@ struct Constants {
     
     struct ButtonActions {
         
-        static let disabledButtonAlpha = 0.6
-        static let enabledButtonAlpha = 1
+        static let disabledButtonAlpha = CGFloat (0.6)
+        static let enabledButtonAlpha = CGFloat (1)
         static let buttonReverseName = "Reverse"
         static let buttonClearName = "Clear"
     }

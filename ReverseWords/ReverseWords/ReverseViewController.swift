@@ -82,7 +82,7 @@ class ReverseViewController: UIViewController {
         func setupEnterTextState() {
             
             actionButton.isEnabled = true
-            actionButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            actionButton.alpha = Constants.ButtonActions.enabledButtonAlpha
             actionButton.setTitle(Constants.ButtonActions.buttonReverseName, for: .normal)
             reversedTextView.isHidden = true
             reversedTextView.text?.removeAll()
@@ -92,7 +92,7 @@ class ReverseViewController: UIViewController {
         func setupClearState(withText: String) {
             
             actionButton.isEnabled = true
-            actionButton.alpha = CGFloat(Constants.ButtonActions.enabledButtonAlpha)
+            actionButton.alpha = Constants.ButtonActions.enabledButtonAlpha
             actionButton.setTitle(Constants.ButtonActions.buttonClearName, for: .normal)
             reversedTextView.isHidden = false
             reversedTextView.text = withText
