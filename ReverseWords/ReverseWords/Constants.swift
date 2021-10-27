@@ -16,6 +16,7 @@ struct Constants {
         static let enabledButtonAlpha: CGFloat =  1
         static let buttonReverseName = "Reverse"
         static let buttonClearName = "Clear"
+        static let returnButton = "Return"
     }
     
     struct Font {
@@ -39,5 +40,6 @@ struct Constants {
     struct AccessibilityIdentifier {
         
         static let userInputTextField = "userInputTextField"
+        static let reversedString = "reverseResult"
     }
 }

@@ -28,7 +28,7 @@ class ReverseViewController: UIViewController, UITextFieldDelegate {
         didSet {
             userInputTextField.addTarget(self, action: #selector(onTextFieldEdited), for: .editingChanged)
             userInputTextField.font = Constants.Font.userInputTextFieldFont
-            userInputTextField.accessibilityLabel = Constants.AccessibilityIdentifier.userInputTextField
+            userInputTextField.accessibilityIdentifier = Constants.AccessibilityIdentifier.userInputTextField
         }
     }
     @IBOutlet weak var reversedTextView: UITextView! {
@@ -36,6 +36,7 @@ class ReverseViewController: UIViewController, UITextFieldDelegate {
             reversedTextView.font = Constants.Font.reversedTextViewFont
             reversedTextView.textColor = .systemBlue
             reversedTextView.isEditable = false
+            reversedTextView.accessibilityIdentifier = Constants.AccessibilityIdentifier.reversedString
         }
     }
     @IBOutlet weak var actionButton: UIButton! {
