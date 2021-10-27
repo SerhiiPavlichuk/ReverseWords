@@ -17,18 +17,13 @@ class ReverseWordsTests: XCTestCase {
         // Given
         let inputData = "Test string"
         let expectedResult = "tseT gnirts"
-        let inputAnotherData = "I love the smell of napalm in the morning =). bomber B-17 added heat"
-        let anotherExpectedResult = "I evol eht llems fo mlapan ni eht gninrom .)= rebmob 71-B dedda taeh"
         let validateResult: String
-        let anotherValidateResult: String
         
         // When
         validateResult = reverseString.reverseWords(input: inputData)
-        anotherValidateResult = reverseString.reverseWords(input: inputAnotherData)
         
         // Then
         XCTAssertEqual(validateResult, expectedResult)
-        XCTAssertEqual(anotherValidateResult, anotherExpectedResult)
     }
     
     func testReverseWordsWithSymbolsAndnumbers() throws {
