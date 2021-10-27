@@ -10,7 +10,7 @@ import XCTest
 
 class ReverseWordsTests: XCTestCase {
     
-   private let reverseString = ReverseString()
+    private let reverseString = ReverseString()
     
     func testReverseWords() throws {
         
@@ -19,9 +19,8 @@ class ReverseWordsTests: XCTestCase {
         let expectedResult = "tseT gnirts"
         let inputAnotherData = "I love the smell of napalm in the morning =). bomber B-17 added heat"
         let anotherExpectedResult = "I evol eht llems fo mlapan ni eht gninrom .)= rebmob 71-B dedda taeh"
-        var validateResult: String
-        var anotherValidateResult: String
-        
+        let validateResult: String
+        let anotherValidateResult: String
         
         // When
         validateResult = reverseString.reverseWords(input: inputData)
@@ -30,5 +29,20 @@ class ReverseWordsTests: XCTestCase {
         // Then
         XCTAssertEqual(validateResult, expectedResult)
         XCTAssertEqual(anotherValidateResult, anotherExpectedResult)
+    }
+    
+    func testReverseWordsWithSymbolsAndnumbers() throws {
+        
+        // Given
+        let inputData = "I love the smell of napalm in the morning =). bomber B-17 added heat"
+        let expectedResult = "I evol eht llems fo mlapan ni eht gninrom .)= rebmob 71-B dedda taeh"
+        let validateResult: String
+        
+        // When
+        validateResult = reverseString.reverseWords(input: inputData)
+        
+        // Then
+        XCTAssertEqual(validateResult, expectedResult)
+        
     }
 }
