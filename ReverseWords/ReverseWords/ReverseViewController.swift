@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReverseViewController: UIViewController {
+class ReverseViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Enums
     
@@ -28,6 +28,7 @@ class ReverseViewController: UIViewController {
         didSet {
             userInputTextField.addTarget(self, action: #selector(onTextFieldEdited), for: .editingChanged)
             userInputTextField.font = Constants.Font.userInputTextFieldFont
+            userInputTextField.accessibilityIdentifier = Constants.AccessibilityIdentifier.userInputTextField
         }
     }
     @IBOutlet weak var reversedTextView: UITextView! {
@@ -35,6 +36,7 @@ class ReverseViewController: UIViewController {
             reversedTextView.font = Constants.Font.reversedTextViewFont
             reversedTextView.textColor = .systemBlue
             reversedTextView.isEditable = false
+            reversedTextView.accessibilityIdentifier = Constants.AccessibilityIdentifier.reversedString
         }
     }
     @IBOutlet weak var actionButton: UIButton! {
@@ -60,11 +62,17 @@ class ReverseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.userInputTextField.delegate = self
         setupUI()
         title = Constants.UI.title
     }
     
     // MARK: - Methods
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
     private func setupUI() {
         
