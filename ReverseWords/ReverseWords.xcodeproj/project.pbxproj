@@ -13,9 +13,10 @@
 		846A740C271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */; };
 		846A740E271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */; };
 		846EC23D271B52A400494996 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC23C271B52A400494996 /* Constants.swift */; };
+		84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */; };
 		84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AD2714B6BE00731822 /* AppDelegate.swift */; };
 		84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AF2714B6BE00731822 /* SceneDelegate.swift */; };
-		84C296B22714B6BE00731822 /* ReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296B12714B6BE00731822 /* ReverseViewController.swift */; };
+		84C296B22714B6BE00731822 /* StandartModeReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */; };
 		84C296B52714B6BE00731822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B32714B6BE00731822 /* Main.storyboard */; };
 		84C296B72714B6C100731822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B62714B6C100731822 /* Assets.xcassets */; };
 		84C296BA2714B6C100731822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B82714B6C100731822 /* LaunchScreen.storyboard */; };
@@ -48,10 +49,11 @@
 		846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
 		846EC23C271B52A400494996 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionRulesModeReverseViewController.swift; sourceTree = "<group>"; };
 		84C296AA2714B6BE00731822 /* ReverseWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverseWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C296AD2714B6BE00731822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C296AF2714B6BE00731822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84C296B12714B6BE00731822 /* ReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseViewController.swift; sourceTree = "<group>"; };
+		84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartModeReverseViewController.swift; sourceTree = "<group>"; };
 		84C296B42714B6BE00731822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84C296B62714B6C100731822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C296B92714B6C100731822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +100,75 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84976FEC272B16BB0038F0B2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				84976FEE272B175A0038F0B2 /* ExclusionRulesModeReverseViewController */,
+				84976FED272B16D60038F0B2 /* StandartModeReverseViewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		84976FED272B16D60038F0B2 /* StandartModeReverseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84976FF0272B181D0038F0B2 /* View */,
+				84976FEF272B18130038F0B2 /* Model */,
+			);
+			path = StandartModeReverseViewController;
+			sourceTree = "<group>";
+		};
+		84976FEE272B175A0038F0B2 /* ExclusionRulesModeReverseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */,
+			);
+			path = ExclusionRulesModeReverseViewController;
+			sourceTree = "<group>";
+		};
+		84976FEF272B18130038F0B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84582BD62720AACE000F5FE3 /* ReverseString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84976FF0272B181D0038F0B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84976FF1272B18650038F0B2 /* DefaultFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84C296AD2714B6BE00731822 /* AppDelegate.swift */,
+				84C296AF2714B6BE00731822 /* SceneDelegate.swift */,
+				84C296B62714B6C100731822 /* Assets.xcassets */,
+				84C296B82714B6C100731822 /* LaunchScreen.storyboard */,
+			);
+			path = DefaultFiles;
+			sourceTree = "<group>";
+		};
+		84976FF2272B18840038F0B2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				846EC23C271B52A400494996 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		84976FF3272B189F0038F0B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				845936512727CCA100D5E385 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84C296A12714B6BE00731822 = {
 			isa = PBXGroup;
 			children = (
@@ -121,17 +192,13 @@
 		84C296AC2714B6BE00731822 /* ReverseWords */ = {
 			isa = PBXGroup;
 			children = (
-				846A73FE271DED830036FBA6 /* Fonts */,
-				84C296AD2714B6BE00731822 /* AppDelegate.swift */,
-				84C296AF2714B6BE00731822 /* SceneDelegate.swift */,
-				84C296B12714B6BE00731822 /* ReverseViewController.swift */,
-				84C296B32714B6BE00731822 /* Main.storyboard */,
-				84C296B62714B6C100731822 /* Assets.xcassets */,
-				84C296B82714B6C100731822 /* LaunchScreen.storyboard */,
 				84C296BB2714B6C100731822 /* Info.plist */,
-				846EC23C271B52A400494996 /* Constants.swift */,
-				84582BD62720AACE000F5FE3 /* ReverseString.swift */,
-				845936512727CCA100D5E385 /* String+Extension.swift */,
+				84976FF3272B189F0038F0B2 /* Extensions */,
+				84976FF2272B18840038F0B2 /* Common */,
+				84976FF1272B18650038F0B2 /* DefaultFiles */,
+				84976FEC272B16BB0038F0B2 /* Modules */,
+				846A73FE271DED830036FBA6 /* Fonts */,
+				84C296B32714B6BE00731822 /* Main.storyboard */,
 			);
 			path = ReverseWords;
 			sourceTree = "<group>";
@@ -287,11 +354,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C296B22714B6BE00731822 /* ReverseViewController.swift in Sources */,
+				84C296B22714B6BE00731822 /* StandartModeReverseViewController.swift in Sources */,
 				84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */,
 				84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */,
 				846EC23D271B52A400494996 /* Constants.swift in Sources */,
 				845936522727CCA100D5E385 /* String+Extension.swift in Sources */,
+				84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */,
 				84582BD72720AACE000F5FE3 /* ReverseString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
