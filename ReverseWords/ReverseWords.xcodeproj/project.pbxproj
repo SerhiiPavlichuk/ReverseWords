@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		2D6EDE881E230D1EAAF59F47 /* Pods_ReverseWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B4318D782DA013F20FFC89 /* Pods_ReverseWords.framework */; };
 		8447C41B274978C500BDB9F7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447C41A274978C500BDB9F7 /* AuthViewController.swift */; };
-		845782E027495ADC00091A2D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 845782DF27495ADC00091A2D /* GoogleService-Info.plist */; };
 		84582BD72720AACE000F5FE3 /* ReverseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582BD62720AACE000F5FE3 /* ReverseString.swift */; };
 		845936522727CCA100D5E385 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845936512727CCA100D5E385 /* String+Extension.swift */; };
 		846A740A271DED9B0036FBA6 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7401271DED9A0036FBA6 /* SFPRODISPLAYBOLD.OTF */; };
 		846A740C271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */; };
 		846A740E271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */; };
 		846EC23D271B52A400494996 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC23C271B52A400494996 /* Constants.swift */; };
+		84884B20274AB0E800C39B1C /* ModeChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */; };
+		84884B22274ABD2E00C39B1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */; };
 		84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */; };
 		84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AD2714B6BE00731822 /* AppDelegate.swift */; };
 		84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AF2714B6BE00731822 /* SceneDelegate.swift */; };
@@ -49,13 +50,14 @@
 		49648CC5E3E111F274E8C014 /* Pods-ReverseWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReverseWords.debug.xcconfig"; path = "Target Support Files/Pods-ReverseWords/Pods-ReverseWords.debug.xcconfig"; sourceTree = "<group>"; };
 		58B4318D782DA013F20FFC89 /* Pods_ReverseWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReverseWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8447C41A274978C500BDB9F7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
-		845782DF27495ADC00091A2D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84582BD62720AACE000F5FE3 /* ReverseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseString.swift; sourceTree = "<group>"; };
 		845936512727CCA100D5E385 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		846A7401271DED9A0036FBA6 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
 		846EC23C271B52A400494996 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChoiseViewController.swift; sourceTree = "<group>"; };
+		84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionRulesModeReverseViewController.swift; sourceTree = "<group>"; };
 		84C296AA2714B6BE00731822 /* ReverseWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverseWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C296AD2714B6BE00731822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,9 +119,18 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84884B1E274AB0B500C39B1C /* ModeChoiseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */,
+			);
+			path = ModeChoiseViewController;
+			sourceTree = "<group>";
+		};
 		84976FEC272B16BB0038F0B2 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				84884B1E274AB0B500C39B1C /* ModeChoiseViewController */,
 				8447C419274978AA00BDB9F7 /* AuthViewController */,
 				84976FEE272B175A0038F0B2 /* ExclusionRulesModeReverseViewController */,
 				84976FED272B16D60038F0B2 /* StandartModeReverseViewController */,
@@ -212,8 +223,8 @@
 		84C296AC2714B6BE00731822 /* ReverseWords */ = {
 			isa = PBXGroup;
 			children = (
+				84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */,
 				84C296BB2714B6C100731822 /* Info.plist */,
-				845782DF27495ADC00091A2D /* GoogleService-Info.plist */,
 				84976FF3272B189F0038F0B2 /* Extensions */,
 				84976FF2272B18840038F0B2 /* Common */,
 				84976FF1272B18650038F0B2 /* DefaultFiles */,
@@ -370,7 +381,7 @@
 				846A740A271DED9B0036FBA6 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				846A740C271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				846A740E271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF in Resources */,
-				845782E027495ADC00091A2D /* GoogleService-Info.plist in Resources */,
+				84884B22274ABD2E00C39B1C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +452,7 @@
 				84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */,
 				84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */,
 				846EC23D271B52A400494996 /* Constants.swift in Sources */,
+				84884B20274AB0E800C39B1C /* ModeChoiseViewController.swift in Sources */,
 				8447C41B274978C500BDB9F7 /* AuthViewController.swift in Sources */,
 				845936522727CCA100D5E385 /* String+Extension.swift in Sources */,
 				84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */,
