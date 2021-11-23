@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ReverseViewController: UIViewController, UITextFieldDelegate {
+class StandartModeReverseViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Enums
     

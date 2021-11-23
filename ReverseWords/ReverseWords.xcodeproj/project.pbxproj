@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6EDE881E230D1EAAF59F47 /* Pods_ReverseWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58B4318D782DA013F20FFC89 /* Pods_ReverseWords.framework */; };
+		8447C41B274978C500BDB9F7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447C41A274978C500BDB9F7 /* AuthViewController.swift */; };
 		84582BD72720AACE000F5FE3 /* ReverseString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84582BD62720AACE000F5FE3 /* ReverseString.swift */; };
 		845936522727CCA100D5E385 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845936512727CCA100D5E385 /* String+Extension.swift */; };
 		846A740A271DED9B0036FBA6 /* SFPRODISPLAYBOLD.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7401271DED9A0036FBA6 /* SFPRODISPLAYBOLD.OTF */; };
 		846A740C271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */; };
 		846A740E271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF in Resources */ = {isa = PBXBuildFile; fileRef = 846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */; };
 		846EC23D271B52A400494996 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846EC23C271B52A400494996 /* Constants.swift */; };
+		84884B20274AB0E800C39B1C /* ModeChoiseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */; };
+		84884B22274ABD2E00C39B1C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */; };
+		84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */; };
 		84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AD2714B6BE00731822 /* AppDelegate.swift */; };
 		84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296AF2714B6BE00731822 /* SceneDelegate.swift */; };
-		84C296B22714B6BE00731822 /* ReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296B12714B6BE00731822 /* ReverseViewController.swift */; };
+		84C296B22714B6BE00731822 /* StandartModeReverseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */; };
 		84C296B52714B6BE00731822 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B32714B6BE00731822 /* Main.storyboard */; };
 		84C296B72714B6C100731822 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B62714B6C100731822 /* Assets.xcassets */; };
 		84C296BA2714B6C100731822 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C296B82714B6C100731822 /* LaunchScreen.storyboard */; };
@@ -42,16 +47,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49648CC5E3E111F274E8C014 /* Pods-ReverseWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReverseWords.debug.xcconfig"; path = "Target Support Files/Pods-ReverseWords/Pods-ReverseWords.debug.xcconfig"; sourceTree = "<group>"; };
+		58B4318D782DA013F20FFC89 /* Pods_ReverseWords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReverseWords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8447C41A274978C500BDB9F7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		84582BD62720AACE000F5FE3 /* ReverseString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseString.swift; sourceTree = "<group>"; };
 		845936512727CCA100D5E385 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		846A7401271DED9A0036FBA6 /* SFPRODISPLAYBOLD.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYBOLD.OTF; sourceTree = "<group>"; };
 		846A7403271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYMEDIUM.OTF; sourceTree = "<group>"; };
 		846A7405271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = SFPRODISPLAYREGULAR.OTF; sourceTree = "<group>"; };
 		846EC23C271B52A400494996 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeChoiseViewController.swift; sourceTree = "<group>"; };
+		84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionRulesModeReverseViewController.swift; sourceTree = "<group>"; };
 		84C296AA2714B6BE00731822 /* ReverseWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverseWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C296AD2714B6BE00731822 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84C296AF2714B6BE00731822 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84C296B12714B6BE00731822 /* ReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseViewController.swift; sourceTree = "<group>"; };
+		84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartModeReverseViewController.swift; sourceTree = "<group>"; };
 		84C296B42714B6BE00731822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84C296B62714B6C100731822 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84C296B92714B6C100731822 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +72,7 @@
 		84C296CA2714B6C200731822 /* ReverseWordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseWordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C296CE2714B6C200731822 /* ReverseWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsUITests.swift; sourceTree = "<group>"; };
 		84C296D02714B6C200731822 /* ReverseWordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D14859E6C66E11F8F05FAD42 /* Pods-ReverseWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReverseWords.release.xcconfig"; path = "Target Support Files/Pods-ReverseWords/Pods-ReverseWords.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D6EDE881E230D1EAAF59F47 /* Pods_ReverseWords.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8447C419274978AA00BDB9F7 /* AuthViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8447C41A274978C500BDB9F7 /* AuthViewController.swift */,
+			);
+			path = AuthViewController;
+			sourceTree = "<group>";
+		};
 		846A73FE271DED830036FBA6 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +119,85 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		84884B1E274AB0B500C39B1C /* ModeChoiseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84884B1F274AB0E800C39B1C /* ModeChoiseViewController.swift */,
+			);
+			path = ModeChoiseViewController;
+			sourceTree = "<group>";
+		};
+		84976FEC272B16BB0038F0B2 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				84884B1E274AB0B500C39B1C /* ModeChoiseViewController */,
+				8447C419274978AA00BDB9F7 /* AuthViewController */,
+				84976FEE272B175A0038F0B2 /* ExclusionRulesModeReverseViewController */,
+				84976FED272B16D60038F0B2 /* StandartModeReverseViewController */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		84976FED272B16D60038F0B2 /* StandartModeReverseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84976FF0272B181D0038F0B2 /* View */,
+				84976FEF272B18130038F0B2 /* Model */,
+			);
+			path = StandartModeReverseViewController;
+			sourceTree = "<group>";
+		};
+		84976FEE272B175A0038F0B2 /* ExclusionRulesModeReverseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				84976FF4272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift */,
+			);
+			path = ExclusionRulesModeReverseViewController;
+			sourceTree = "<group>";
+		};
+		84976FEF272B18130038F0B2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84582BD62720AACE000F5FE3 /* ReverseString.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84976FF0272B181D0038F0B2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84C296B12714B6BE00731822 /* StandartModeReverseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84976FF1272B18650038F0B2 /* DefaultFiles */ = {
+			isa = PBXGroup;
+			children = (
+				84C296AD2714B6BE00731822 /* AppDelegate.swift */,
+				84C296AF2714B6BE00731822 /* SceneDelegate.swift */,
+				84C296B62714B6C100731822 /* Assets.xcassets */,
+				84C296B82714B6C100731822 /* LaunchScreen.storyboard */,
+			);
+			path = DefaultFiles;
+			sourceTree = "<group>";
+		};
+		84976FF2272B18840038F0B2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				846EC23C271B52A400494996 /* Constants.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		84976FF3272B189F0038F0B2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				845936512727CCA100D5E385 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		84C296A12714B6BE00731822 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +205,8 @@
 				84C296C32714B6C200731822 /* ReverseWordsTests */,
 				84C296CD2714B6C200731822 /* ReverseWordsUITests */,
 				84C296AB2714B6BE00731822 /* Products */,
+				BD78B00B0A33BEE74ADCDC48 /* Pods */,
+				A7E79CB749DDBC1DB9D4BFAB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,17 +223,14 @@
 		84C296AC2714B6BE00731822 /* ReverseWords */ = {
 			isa = PBXGroup;
 			children = (
-				846A73FE271DED830036FBA6 /* Fonts */,
-				84C296AD2714B6BE00731822 /* AppDelegate.swift */,
-				84C296AF2714B6BE00731822 /* SceneDelegate.swift */,
-				84C296B12714B6BE00731822 /* ReverseViewController.swift */,
-				84C296B32714B6BE00731822 /* Main.storyboard */,
-				84C296B62714B6C100731822 /* Assets.xcassets */,
-				84C296B82714B6C100731822 /* LaunchScreen.storyboard */,
+				84884B21274ABD2E00C39B1C /* GoogleService-Info.plist */,
 				84C296BB2714B6C100731822 /* Info.plist */,
-				846EC23C271B52A400494996 /* Constants.swift */,
-				84582BD62720AACE000F5FE3 /* ReverseString.swift */,
-				845936512727CCA100D5E385 /* String+Extension.swift */,
+				84976FF3272B189F0038F0B2 /* Extensions */,
+				84976FF2272B18840038F0B2 /* Common */,
+				84976FF1272B18650038F0B2 /* DefaultFiles */,
+				84976FEC272B16BB0038F0B2 /* Modules */,
+				846A73FE271DED830036FBA6 /* Fonts */,
+				84C296B32714B6BE00731822 /* Main.storyboard */,
 			);
 			path = ReverseWords;
 			sourceTree = "<group>";
@@ -153,6 +252,23 @@
 			path = ReverseWordsUITests;
 			sourceTree = "<group>";
 		};
+		A7E79CB749DDBC1DB9D4BFAB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58B4318D782DA013F20FFC89 /* Pods_ReverseWords.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD78B00B0A33BEE74ADCDC48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				49648CC5E3E111F274E8C014 /* Pods-ReverseWords.debug.xcconfig */,
+				D14859E6C66E11F8F05FAD42 /* Pods-ReverseWords.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,9 +276,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84C296D42714B6C200731822 /* Build configuration list for PBXNativeTarget "ReverseWords" */;
 			buildPhases = (
+				7DC05BBFE0A891E5F6E90F0F /* [CP] Check Pods Manifest.lock */,
 				84C296A62714B6BE00731822 /* Sources */,
 				84C296A72714B6BE00731822 /* Frameworks */,
 				84C296A82714B6BE00731822 /* Resources */,
+				09C804A08B7F855682CF806C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -263,6 +381,7 @@
 				846A740A271DED9B0036FBA6 /* SFPRODISPLAYBOLD.OTF in Resources */,
 				846A740C271DED9B0036FBA6 /* SFPRODISPLAYMEDIUM.OTF in Resources */,
 				846A740E271DED9B0036FBA6 /* SFPRODISPLAYREGULAR.OTF in Resources */,
+				84884B22274ABD2E00C39B1C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,16 +401,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09C804A08B7F855682CF806C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReverseWords/Pods-ReverseWords-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ReverseWords/Pods-ReverseWords-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ReverseWords/Pods-ReverseWords-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DC05BBFE0A891E5F6E90F0F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ReverseWords-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84C296A62714B6BE00731822 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C296B22714B6BE00731822 /* ReverseViewController.swift in Sources */,
+				84C296B22714B6BE00731822 /* StandartModeReverseViewController.swift in Sources */,
 				84C296AE2714B6BE00731822 /* AppDelegate.swift in Sources */,
 				84C296B02714B6BE00731822 /* SceneDelegate.swift in Sources */,
 				846EC23D271B52A400494996 /* Constants.swift in Sources */,
+				84884B20274AB0E800C39B1C /* ModeChoiseViewController.swift in Sources */,
+				8447C41B274978C500BDB9F7 /* AuthViewController.swift in Sources */,
 				845936522727CCA100D5E385 /* String+Extension.swift in Sources */,
+				84976FF5272B195E0038F0B2 /* ExclusionRulesModeReverseViewController.swift in Sources */,
 				84582BD72720AACE000F5FE3 /* ReverseString.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +630,7 @@
 		};
 		84C296D52714B6C200731822 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49648CC5E3E111F274E8C014 /* Pods-ReverseWords.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +660,7 @@
 		};
 		84C296D62714B6C200731822 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D14859E6C66E11F8F05FAD42 /* Pods-ReverseWords.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
